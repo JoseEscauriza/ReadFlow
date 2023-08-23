@@ -77,22 +77,15 @@ CREATE TABLE borrowed_book (
   CONSTRAINT fk_copy_id FOREIGN KEY (copy_id) REFERENCES book_copy(id)
 );
 
-CREATE TABLE permission (
-  id serial PRIMARY KEY,
-  permission_type perm NOT NULL DEFAULT 'Read'
-);
-
-CREATE TABLE role_permission (
-  id serial PRIMARY KEY,
-  role_id CHAR(1),
-  permission_id serial,
-  CONSTRAINT fk_role_id FOREIGN KEY (role_id) REFERENCES book_user_role(id),
-  CONSTRAINT fk_permission_id FOREIGN KEY (permission_id) REFERENCES permission(id)
-);
 
 CREATE TABLE logs (
   id serial PRIMARY KEY,
-  logs_event TEXT,
-  error VARCHAR(50) NOT NULL,
-  book_user_activity TEXT
+  logs_event VARCHAR(100),
+  timest TIMESTAMP
 );
+
+-- Drop the role_permission table first since it has foreign key references
+DROP TABLE IF EXISTS role_permission;
+
+-- Drop the permission table
+DROP TABLE IF EXISTS permission;
