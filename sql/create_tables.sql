@@ -7,6 +7,8 @@ DROP TABLE IF EXISTS book CASCADE;
 DROP TABLE IF EXISTS author CASCADE;
 DROP TABLE IF EXISTS book_user CASCADE;
 DROP TABLE IF EXISTS book_user_role CASCADE;
+DROP TABLE IF EXISTS role_permission;
+DROP TABLE IF EXISTS permission;
 
 -- Create types
 DROP TYPE IF EXISTS urole CASCADE;
@@ -25,7 +27,7 @@ CREATE TABLE author (
   id serial PRIMARY KEY,
   first_name VARCHAR(255),
   last_name VARCHAR(255) NOT NULL
-);
+ );
 
 CREATE TABLE book (
   id serial PRIMARY KEY,
@@ -56,20 +58,16 @@ CREATE TABLE book_user (
   role_id CHAR(1) NOT NULL DEFAULT '2',
   creation_time TIMESTAMP,
   modification_time TIMESTAMP,
+  recovery_answer VARCHAR(255),
   CONSTRAINT fk_role_id FOREIGN KEY (role_id) REFERENCES book_user_role(id) ON DELETE CASCADE
 );
 
-CREATE TABLE book_status (
-  id serial PRIMARY KEY,
-  book_user_id serial,
-  available BOOLEAN NOT NULL DEFAULT FALSE
-  -- DATES??
-);
 
 CREATE TABLE borrowed_book (
   id serial PRIMARY KEY,
   book_user_id serial NOT NULL,
   copy_id serial NOT NULL,
+  available BOOLEAN NOT NULL DEFAULT FALSE,
   borrow_date TIMESTAMP,
   return_date TIMESTAMP,
   due_date DATE,
@@ -83,9 +81,3 @@ CREATE TABLE logs (
   logs_event VARCHAR(100),
   timest TIMESTAMP
 );
-
--- Drop the role_permission table first since it has foreign key references
-DROP TABLE IF EXISTS role_permission;
-
--- Drop the permission table
-DROP TABLE IF EXISTS permission;
