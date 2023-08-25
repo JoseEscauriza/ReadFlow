@@ -1,0 +1,98 @@
+Implement User menu
+    - New user registration
+        - prompt username
+        - prompt password
+        - re-prompt password
+        - prompt email
+        - prompt phone number (optional)
+        - prompt special question
+        - assign role id (1=Admin, 2=User)
+        - handle exceptions
+        - if data is ok, write to db + confirmation message + back to login menu
+        - option to go back to user menu
+    
+    - User login
+        -prompt username
+        - prompt password
+        - check database. If data matches = login, otherwise prompt again / cancel after 3 tries
+        - password recovery through special question
+        - option to go back to user menu
+
+
+Implement main menu
+CHECK USER TYPE
+    USER = USER
+        - Account menu
+            - Change username
+            - Change password
+            - Change email
+            - Change phone number
+            - Change their special question?
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Book menu
+            - Book library display
+            - Book(s) search by isbn/author/title/genre
+            - Check book location
+            - Borrow Book
+            - Return Book
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Borrowed book menu
+            - What books is the user borrowing
+            - Display due dates
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Logs menu
+            - Report bug
+            - Go back to previous menu
+            - Go back to main menu
+
+    USER = ADMIN
+        - Account menu
+            - Change username / client username
+            - Change password / client password
+            - Change email / client email
+            - Change phone number / client phone number
+            - Change their special question? / client special question
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Author menu
+            - Insert new Author
+            - Modify Author
+            - Delete Author
+            - Search by Author
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Book copy menu
+            - Add book copy
+            - Delete book copy
+            - Change book availability
+            - Change location
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Borrowed book menu
+            - Display borrowed books
+            - Display overdue books
+            - Display most rented books
+            - Display most rented authors
+            - Display most rented genres
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Log menu
+            - Report bugs
+            - see bug reports
+            - Go back to previous menu
+            - Go back to main menu
+
+        - Log out
+            - Take app back to User menu
+        
+        - Exit app
