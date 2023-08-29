@@ -184,3 +184,21 @@ class Menu:
               
             """
         )
+        
+    @staticmethod
+    def display_admin_borrowed_book_menu():
+        print(
+            """
+            BORROWED BOOK MENU:
+
+            1. Display borrowed books
+            2. Display overdue books
+            3. Display most rented books
+            4. Display most rented authors
+            5. Display most rented genres
+            77. Go back to Admin Main Menu
+            88. Log Out
+            99. Exit App
+
+            """
+        )
