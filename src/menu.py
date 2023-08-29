@@ -44,7 +44,7 @@ class Menu():
               99. Exit App
               
               """)
-        
+
     @staticmethod
     def display_admin_author_menu():
         print("""
@@ -59,7 +59,7 @@ class Menu():
               99. Exit App
               
               """)
-        
+
     @staticmethod
     def display_admin_log_menu():
         print("""
@@ -71,4 +71,35 @@ class Menu():
               88. Log Out
               99. Exit App
               
-              """)  
+              """)
+
+    @staticmethod
+    def display_admin_acc_menu():
+        print("""
+              ADMIN ACCOUNT MENU:
+              
+              1. Change Username
+              2. Change Password
+              3. Change email
+              4. Change phone number
+              5. Change special question
+              77. Go back to Admin Main Menu
+              88. Log Out
+              99. Exit App
+              
+              """)
+
+    @staticmethod
+    def display_admin_book_copy_menu():
+        print("""
+              ADMIN BOOK COPY MENU:
+              
+              1. Add Book Copy
+              2. Delete Book Copy
+              3. Change Book availability
+              4. Change Book location
+              77. Go back to Admin Main Menu
+              88. Log Out
+              99. Exit App
+              
+              """)
