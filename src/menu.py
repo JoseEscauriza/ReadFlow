@@ -90,7 +90,7 @@ class Menu():
               """)
 
     @staticmethod
-    def display_admin_acc_menu():
+    def display_admin_book_copy_menu():
         print("""
               ADMIN BOOK COPY MENU:
               
