@@ -151,3 +151,36 @@ class Menu:
             
             """
         )
+
+    @staticmethod
+    def login_menu():
+        print("Welcome to the ReadFlow")
+        print("1. Log In")
+        print("2. Register")
+        print("99. Exit App")
+            
+    @staticmethod
+    def login():
+    # Implement Logic 
+        print("You have selected 'Log In'.")
+    # Add login code 
+    
+    @staticmethod
+    def register():
+        # Implement registration logic 
+        print("You have selected 'Register'.")
+        # Add registration code 
+        
+    @staticmethod
+    def display_user_log_menu():
+        print(
+            """
+            USER LOG MENU:
+              
+            1. Report Bugs
+            77. Go back to User Main Menu
+            88. Log Out
+            99. Exit App
+              
+            """
+        )
